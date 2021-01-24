@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="clearAll" id="clearAll"><h3>c</h3></div>
+        <form action="" name="formCalc" id="formCalc">    
+            <div class="displayBox">
+                <input type="text" id="displayBox" readonly>
+                <div class="answerDiv"><h4 id="answerDiv"></h4></div>
+            </div>
+            <div class="wrapperInputs">
+                <div class="backSpace" onclick="backSpace()"><i class="fas fa-backspace"></i></div>
+                <div class="sub" onclick="appendString('-')"><i class="fa fa-minus" aria-hidden="true"></i></div>
+                <div class="addition" onclick="appendString('+')"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                <div class="equals" onclick="evaluateString()"><h3>=</h3></div>
+                <div class="mult" onclick="appendString('*')"><i class="fa fa-times" aria-hidden="true"></i></div>
+                <div class="divN" onclick="appendString('/')"><h3>/</h3></i></div>
+                <div class="inputItem1" onclick="appendString(1)"><input type="text" id="inputItem1" value="1" readonly></div>
+                <div class="inputItem2" onclick="appendString(2)"><input type="text" id="inputItem2" value="2" readonly></div>
+                <div class="inputItem3" onclick="appendString(3)"><input type="text" id="inputItem3" value="3" readonly></div>
+                <div class="inputItem4" onclick="appendString(4)"><input type="text" id="inputItem4" value="4" readonly></div>
+                <div class="inputItem5" onclick="appendString(5)"><input type="text" id="inputItem5" value="5" readonly></div>
+                <div class="inputItem6" onclick="appendString(6)"><input type="text" id="inputItem6" value="6" readonly></div>
+                <div class="inputItem7" onclick="appendString(7)"><input type="text" id="inputItem7" value="7" readonly></div>
+                <div class="inputItem8" onclick="appendString(8)"><input type="text" id="inputItem8" value="8" readonly></div>
+                <div class="inputItem9" onclick="appendString(9)"><input type="text" id="inputItem9" value="9" readonly></div>
+                <div class="inputItem10" onclick="appendString(0)"><input type="text" id="inputItem10" value="0" readonly></div>
+            </div>
+        </form>
+    </div>
+<script src="js/main.js"></script>
+</body>
+</html>

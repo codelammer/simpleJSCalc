@@ -1,0 +1,233 @@
+$pink: #ef024d;
+$lightPink: #ff9a8c;
+$white: #fad5ad;
+$green: #506421;
+$blue: #31235e;
+@mixin fontAwesome {
+    font-size: 2em;
+    color: $white;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    .wrapper{
+        border: 1px solid $green;
+        border-radius: 10px;
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        position: relative;
+        .clearAll{
+            border: 1px solid $green;
+            background-color: white;
+            position: absolute;
+            top: -40px;
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            h3{
+                font-family: sans-serif;
+                color: $pink;
+                font-size: 3em;
+                cursor: pointer;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //border: 1px solid black;
+            .displayBox{
+                width: 100%;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                background-color: $green;
+                border-radius: 10px 10px 0px 0px;
+                overflow: hidden;
+                position: relative;
+                .answerDiv{
+                    //border: 1px solid red;
+                    position: absolute;
+                    top: 60%;
+                    width: 100%;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    h4{
+                        font-size: 2.0em;
+                        color: $white;
+                        padding-right: 10px;
+                        transition: 0.3s ease;
+                    }
+                }
+                input{
+                    width: 100%;
+                    background-color: $green;
+                    height: 100%;
+                    color: white;
+                    outline: none;
+                    border: none;
+                    font-size: 2em;
+                    padding: 10px;
+                    cursor: default;
+                    text-align: right;
+                }
+            }
+            .wrapperInputs{
+                display: grid;
+                //border: 1px solid yellow;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas: 
+                "one two three backSpace"
+                "four five six addition"
+                "seven eight nine subb"
+                "divN zeroth mult equals"
+                ;
+                justify-content: center;
+                grid-column-gap: 5px;
+                grid-row-gap: 5px;
+                width: 100%;
+                div{
+                    height: 80px;         
+                    display: flex;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: $pink;
+                    box-shadow: 0px 0px 5px black;
+                    width: 80px;
+                    cursor: pointer;
+                    transition: 0.15s ease;
+                    &:hover{
+                        opacity: 90%;
+                    }
+                    input{
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                        font-size: 2.5em;
+                        color: $white;
+                        width: 100%;
+                        text-align: center;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    } 
+                }
+                .mult{
+                    grid-area: mult;
+                    background-color: $blue;
+                    display: flex;
+                    justify-content: center;
+                    i{
+                        @include fontAwesome;
+                    }
+                }
+                .divN{
+                    grid-area: divN;
+                    background-color: $blue;
+                    display: flex;
+                    justify-content: center;
+                    h3{
+                        color: $white;
+                        font-size: 3em;
+                    }
+                }
+                .equals{
+                    grid-area: equals;
+                    background-color: $blue;
+                    display: flex;
+                    justify-content: center;
+                    h3{
+                        color: $white;
+                        font-size: 3.5em;
+                    }
+                }
+                .backSpace{
+                    background-color: $blue;
+                    grid-area: backSpace;
+                    display: flex;
+                    justify-content: center;
+                    i{
+                        @include fontAwesome;
+                    }
+                }
+                .sub{
+                    grid-area: subb;
+                    background-color: $blue;
+                    display: flex;
+                    justify-content: center;
+                    i{
+                        @include fontAwesome;
+                    }                    
+                }
+                .addition{
+                    grid-area: addition;
+                    background-color: $blue;
+                    display: flex;
+                    justify-content: center;
+                    i{
+                        @include fontAwesome;
+                    }                    
+                }
+                .inputItem1{
+                   grid-area: one;
+                }
+                .inputItem2{
+                    grid-area: two;
+                }
+                .inputItem3{
+                    grid-area: three;
+                }
+                .inputItem4{
+                    grid-area: four;
+                }
+                .inputItem5{
+                    grid-area: five;
+                }
+                .inputItem6{
+                    grid-area: six;
+                }
+                .inputItem7{
+                    grid-area: seven;
+                }
+                .inputItem8{
+                    grid-area: eight;
+                }
+                .inputItem9{
+                    grid-area: nine;
+                }
+                .inputItem10{
+                    grid-area: zeroth;
+                }
+            }
+        }
+    }
+
+
+    .flexWrapper{
+        margin: 20px 0px;
+        border: 1px solid green;
+        display: flex;
+        .flexItem{
+            background-color: orangered;
+            border: 1px solid black;
+        }
+    }
+
+}
